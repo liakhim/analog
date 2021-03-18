@@ -24,7 +24,6 @@
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-group-css-media-queries": "^1.2.2",
@@ -32,5 +31,11 @@
     "gulp-uglify": "^3.0.2",
     "node-sass": "^5.0.0",
     "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "gulp-babel": "^8.0.0",
+    "gulp-image": "^6.2.1"
   }
 }

@@ -1,1 +1,3 @@
-import Vue from 'vue';
+"use strict";
+
+alert('test');
