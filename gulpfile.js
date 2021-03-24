@@ -23,28 +23,18 @@ gulp.task('css_build', function (done) {
     done();
 });
 
-gulp.task('js_build', function (done) {
-    gulp.src('src/assets/js/index.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('build/js/'))
-        .pipe(browserSync.stream());
-    done();
-});
-
 gulp.task('webServer', function(done) {
     browserSync.init({
         server: "build/"
     });
     gulp.watch('src/**/*.html', gulp.series('html_build'));
     gulp.watch('src/**/*.scss', gulp.series('css_build'));
-    gulp.watch('src/**/*.js', gulp.series('js_build'));
     done();
 });
 
 gulp.task('build', function(done) {
     gulp.src('src/*.html').pipe(gulp.dest('build/'));
-    gulp.src('src/assets/scss/*.scss').pipe(gulp.dest('build/css/'))
-    gulp.src('src/assets/js/index.js').pipe(gulp.dest('build/js/'))
+    gulp.src('src/assets/scss/*.scss').pipe(gulp.dest('src/css/'))
     done();
 });
 

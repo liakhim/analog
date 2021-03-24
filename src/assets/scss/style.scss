@@ -1,3 +1,39 @@
-h1 {
-  color: red;
+.player {
+  max-width: 610px;
+  position: relative;
+  .main-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .left-b {
+    position: absolute;
+    left: 28px;
+    top: 23px;
+    width: 250px;
+    height: 250px;
+    animation: 5s rotate infinite linear;
+    img {
+      width: 100%;
+    }
+  }
+  .right-b {
+    position: absolute;
+    width: 250px;
+    right: 23px;
+    top: 22px;
+    animation: 5s rotate infinite linear;
+    img {
+      width: 100%;
+    }
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
