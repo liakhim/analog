@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Garamond; /* Имя шрифта */
+  src: url('../fonts/garamond.ttf'); /* Путь к файлу со шрифтом */
+}
+h1 {
+  font-family: 'Garamond', sans-serif;
+  font-weight: 900;
+  margin: 0;
+  font-size: 24vw;
+}
 .player {
   max-width: 610px;
   position: relative;
