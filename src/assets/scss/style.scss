@@ -7,6 +7,14 @@ h1 {
   font-weight: 900;
   margin: 0;
   font-size: 24vw;
+  position: relative;
+  z-index: 1;
+}
+.letter-o {
+  width: 87%;
+  position: absolute;
+  top: -22vw;
+  left: -32%;
 }
 .player {
   max-width: 610px;
