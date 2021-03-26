@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -6,19 +6,85 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Analog Music</title>
 </head>
 <body>
-    <h1>АН<span style="color: #fff;position: relative">А</span>ЛОГ</h1>
-    <img class="letter-o" style="width: 87%" src="img/letter-o.svg" alt="">
-    <div class="player">
-        <img src="img/player.png" alt="player">
-        <div class="left-b">
-            <img src="img/left-b.png" alt="">
-        </div>
-        <div class="right-b">
-            <img src="img/right-b.png" alt="">
+    <div class="main-block">
+        <h1>АН<span style="color: #fff;position: relative">А</span>ЛОГ</h1>
+        <h3>возвраща<span style="color: #fff;position: relative;z-index: 2">ется</span></h3>
+        <img class="letter-o wow" src="img/letter-o.svg" alt="">
+        <div class="player">
+            <img src="img/player.png" alt="player">
+            <div class="left-b">
+                <img src="img/left-b.png" alt="">
+            </div>
+            <div class="right-b">
+                <img src="img/right-b.png" alt="">
+            </div>
         </div>
     </div>
+    <div class="second-block">
+        <img src="img/man-headphone.png" alt="">
+    </div>
+    <div class="third-block">
+<!--        slideOutLeft-->
+        <div class="background-text wow" data-wow-offset="100" data-wow-duration="5s" data-wow-delay="0.5s">
+            <p class="green small">КТО</p>
+            <p class="green big">МЫ?</p>
+        </div>
+        <div class="front container-fluid">
+            <div class="front-text">
+                <p class="small-title">Кто</p>
+                <p class="big-title">мы?</p>
+                <p>Команда энтузиастов, которая неравнодушна к тому, что продается на рынке. Мы нарастили неплохую
+                    экспертизу в анализе записей и накопили большое количество честных аналоговых копий, близких к
+                    первоисточнику</p>
+            </div>
+            <div class="front-img">
+                <img src="img/right-b-circle.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div class="third-block">
+        <!--        slideOutLeft-->
+        <div class="background-text wow " data-wow-offset="100" data-wow-duration="5s" data-wow-delay="0.5s">
+            <p class="rose small">Что мы</p>
+            <p class="rose big">предлагаем?</p>
+        </div>
+        <div class="front container-fluid">
+            <div class="front-text">
+                <p class="small-title">Что мы</p>
+                <p class="big-title">предлагаем?</p>
+                <p>Копии с мастер-лент.</p>
+                <p> Да-да, все верно. У нас большое количество записей, которые близки к
+                    оригинальным записям. </p>
+                <p>ВНИМАНИЕ! Мы не нарушаем авторские права, поэтому НЕ ПРОДАЕМ записи
+                    исполнителей, а ПРИГЛАШАЕМ ВАС К ПРОСЛУШИВАНИЮ!</p>
+            </div>
+            <button class="btn btn-success">Список записей</button>
+        </div>
+    </div>
+    <div class="card-block container-fluid">
+        <div class="card-block-content">
+            Мы предлагаем вам Анализ записей.
+            Представьте, что к вам в руки попала запись, звучит она здорово (а может и не очень) и вам уж очень хочется знать источник этой записи. Мы готовы помочь.
+            Проанализируем вашу запись и выдадим сертификат с подтверждением источника записи.
+            Стоимость работ: 5000 руб.
+        </div>
+        <button class="btn btn-success">Заказать анализ</button>
+    </div>
+    <div class="footer-block">
+        <div class="container-fluid">
+            <p>hjvjhbkjl</p>
+        </div>
+
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>

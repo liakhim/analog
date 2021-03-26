@@ -1,51 +1,158 @@
 @font-face {
-  font-family: Garamond; /* Имя шрифта */
-  src: url('../fonts/garamond.ttf'); /* Путь к файлу со шрифтом */
+  font-family: Garamond;
+  src: url('../fonts/garamond.ttf');
 }
-h1 {
-  font-family: 'Garamond', sans-serif;
-  font-weight: 900;
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+p {
   margin: 0;
-  font-size: 24vw;
-  position: relative;
-  z-index: 1;
+  line-height: 1;
 }
-.letter-o {
-  width: 87%;
-  position: absolute;
-  top: -22vw;
-  left: -32%;
-}
-.player {
-  max-width: 610px;
-  position: relative;
-  .main-img {
+.main-block {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  max-width: 100%;
+  h1 {
+    font-family: 'Garamond', sans-serif;
+    font-weight: 900;
+    margin: 0;
+    font-size: 23vw;
+    position: relative;
+    z-index: 1;
+    line-height: 0.75;
+  }
+  h3 {
+    font-family: 'Garamond', sans-serif;
+    font-weight: 900;
     width: 100%;
+    text-align: left;
+    font-size: 5vw;
+    line-height: 1;
+    margin: 0;
+    text-indent: 12.5vw;
+  }
+  .letter-o {
+    width: 80%;
+    position: absolute;
+    top: -30vw;
+    left: -26%;
+  }
+  .player {
+    max-width: 610px;
+    position: relative;
+    margin-right: 5%;
+    margin-top: -5%;
+    .main-img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .left-b {
+      position: absolute;
+      left: 28px;
+      top: 23px;
+      width: 250px;
+      height: 250px;
+      animation: 5s rotate infinite linear;
+      img {
+        width: 100%;
+      }
+    }
+    .right-b {
+      position: absolute;
+      width: 250px;
+      right: 23px;
+      top: 22px;
+      animation: 5s rotate infinite linear;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.second-block {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin-top: -10vh;
+  img {
+    width: 120%;
+    margin-left: -10%;
+  }
+}
+.third-block {
+  position: relative;
+  max-width: 100%;
+  .background-text {
     position: absolute;
     top: 0;
     left: 0;
-  }
-  .left-b {
-    position: absolute;
-    left: 28px;
-    top: 23px;
-    width: 250px;
-    height: 250px;
-    animation: 5s rotate infinite linear;
-    img {
-      width: 100%;
+    z-index: 0;
+    .green {
+      margin: 0;
+      font-weight: 900;
+      color: #00FFC2;
+      opacity: 0.2;
+    }
+    .rose {
+      color: #FF00B8;
+      margin: 0;
+      font-weight: 900;
+      opacity: 0.2;
+    }
+    .green.small {
+      font-size: 12vw;
+      text-transform: uppercase;
+    }
+    .green.big {
+      font-size: 36vw;
+      text-transform: uppercase;
+    }
+    .rose.small {
+      font-size: 12vw;
+      text-transform: uppercase;
+    }
+    .rose.big {
+      font-size: 36vw;
+      text-transform: uppercase;
     }
   }
-  .right-b {
-    position: absolute;
-    width: 250px;
-    right: 23px;
-    top: 22px;
-    animation: 5s rotate infinite linear;
-    img {
-      width: 100%;
+  .front {
+    z-index: 1;
+    position: relative;
+    .front-text {
+      .small-title {
+        font-size: 4em;
+        text-transform: uppercase;
+
+      }
+      .big-title {
+        font-size: 13em;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 2em;
+        font-weight: 900;
+      }
     }
   }
+}
+.card-block {
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.footer-block {
+  height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  background-image: url("../img/footer.svg");
+  background-size: cover;
 }
 @keyframes rotate {
   0% {
@@ -55,3 +162,4 @@ h1 {
     transform: rotate(360deg);
   }
 }
+

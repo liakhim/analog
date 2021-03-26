@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/liakhim/analog#readme",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.6.0",
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
@@ -32,6 +33,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "node-sass": "^5.0.0",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "wow.js": "^1.2.2"
   }
 }
