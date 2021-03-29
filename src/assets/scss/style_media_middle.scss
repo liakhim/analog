@@ -1,0 +1,145 @@
+@media (max-width: 1600px) {
+  .main-block {
+    .player {
+      max-width: 420px;
+      margin-top: 0;
+      img {
+        width: 100%;
+      }
+      .left-b {
+        position: absolute;
+        left: 24px;
+        top: 20px;
+        width: 160px;
+        height: 160px;
+        animation: 5s rotate infinite linear;
+      }
+      .right-b {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        right: 21px;
+        top: 24px;
+        animation: 5s rotate infinite linear;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .second-block {
+    margin-top: 0;
+    img {
+      width: 130%;
+      margin-left: -15%;
+    }
+    .custom-container {
+      .text {
+        h3 {
+          color: #fff;
+          font-size: 4.4em;
+        }
+        h4 {
+          font-size: 1.85em;
+        }
+        .border-text {
+          max-width: 500px;
+          p {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+  .third-block {
+    .background-text {
+      .green {
+        margin: 0;
+      }
+      .rose {
+        color: #FF00B8;
+      }
+      .green.small {
+        font-size: 8vw;
+      }
+      .green.big {
+        font-size: 26vw;
+      }
+      .rose.small {
+        font-size: 8vw;
+      }
+      .rose.big {
+        font-size: 26vw;
+      }
+    }
+    .front {
+      .front-text {
+        width: 50%;
+        .small-title {
+          font-size: 4em;
+        }
+        .big-title {
+          font-size: 12em;
+        }
+        p {
+          font-size: 1.3em;
+        }
+      }
+      .front-img {
+        max-width: 500px;
+        width: 50%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .fourth-block {
+    padding: 0;
+    .custom-container {
+      .background-text {
+        .green.small {
+          font-size: 8vw;
+        }
+        .green.big {
+          font-size: 26vw;
+        }
+        .rose.small {
+          font-size: 8vw;
+        }
+        .rose.big {
+          font-size: 26vw;
+        }
+      }
+      .front {
+        .front-text {
+          .small-title {
+            font-size: 2.6em;
+            text-transform: uppercase;
+          }
+          .big-title {
+            text-transform: uppercase;
+          }
+          .title-one {
+            font-size: 1.8em;
+            text-transform: uppercase;
+          }
+          .title-two {
+            font-size: 1.3em;
+          }
+          p {
+            font-size: 1.8em;
+            font-weight: 900;
+            line-height: 1.4;
+          }
+        }
+        .button-box {
+          padding: 50px 0 50px 0;
+        }
+      }
+    }
+  }
+  .footer-block {
+    margin-top: -25vh;
+  }
+}
