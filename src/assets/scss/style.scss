@@ -51,7 +51,7 @@ p {
 }
 .custom-container {
   width: 90%;
-  margin: auto;
+  margin: auto 5%;
   overflow: hidden;
 }
 .main-block {
@@ -129,6 +129,9 @@ p {
   max-width: 100%;
   margin-top: -10vh;
   position: relative;
+  .man-headphone-mobile {
+    display: none;
+  }
   img {
     width: 130%;
     margin-left: -15%;
@@ -497,3 +500,4 @@ p {
 }
 
 @import "./style_media_middle.scss";
+@import "./style_media_mobile_middle.scss";
