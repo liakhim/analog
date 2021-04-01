@@ -79,6 +79,21 @@ p {
     margin: 0;
     text-indent: 13vw;
   }
+  .small-words {
+    text-align: left;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 13vw;
+    padding-top: 4vw;
+    span {
+      font-size: 1.2em;
+    }
+    span:last-child {
+      padding-left: 50px;
+    }
+
+  }
   .letter-o {
     width: 80%;
     position: absolute;
