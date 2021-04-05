@@ -24,6 +24,12 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   max-width: 100%;
+  width: 100%;
+}
+#app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 p {
   margin: 0;

@@ -25,7 +25,7 @@ var vm = new Vue({
                 .then(function (response) {
                     console.log(response)
                 })
-                .finally(()=>{
+                .finally(() => {
                     this.showModal = true
                 })
         },
