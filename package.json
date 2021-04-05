@@ -35,5 +35,8 @@
     "node-sass": "^5.0.0",
     "vue": "^2.6.12",
     "wow.js": "^1.2.2"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1"
   }
 }

@@ -8,136 +8,205 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/fav/favicon-16x16.png">
+    <link rel="manifest" href="/img /fav/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <title>Analog Music</title>
 </head>
 <body>
-    <div class="main-block">
-        <h1>АН<span style="color: #fff;position: relative">А</span>ЛОГ</h1>
-        <h3>возвраща<span style="color: #fff;position: relative;z-index: 2">ется</span></h3>
-        <p class="small-words">
-            <span>...а вместе с ним</span>
-            <span>и фальшивки</span>
-        </p>
-        <img class="letter-o wow" src="img/letter-o.svg" alt="">
-        <div class="player">
-            <img class="arrow" src="img/arrow.svg" alt="">
-            <img src="img/player.png" alt="player">
-            <div class="left-b">
-                <img src="img/left-b.png" alt="">
-            </div>
-            <div class="right-b">
-                <img src="img/right-b.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="second-block">
-        <img class="man-headphone" src="img/man-headphone.png" alt="">
-        <img class="man-headphone-mobile" src="img/man-headphone-mobile.png" alt="">
-        <div class="custom-container">
-            <div class="text">
-                <h3>Люди снова<br>
-                    слушают<br>
-                    музыку на ленте</h3>
-                <h4>Помните этот теплый ламповый звук?<br>Мы тоже. </h4>
-                <div class="border-text">
-                    <p>Люди стремятся к качественному звуку и ищут качественные записи, которые близки к первоисточнику. К
-                        сожалению, и тут хватает своих «героев», которые делают «копии с мастеров», а по факту – с компакт
-                        дисков или с MP3.</p>
-                    <p>Мы решили, что хватит это терпеть, даешь оригинальный аналоговый звук! </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="third-block">
-<!--        slideOutLeft-->
-        <div class="custom-container">
-            <div class="background-text wow slideOutLeft" data-wow-offset="300" data-wow-duration="2s" data-wow-delay="0.5s">
-                <h4 class="green small">КТО</h4>
-                <h4 class="green big">МЫ?</h4>
-            </div>
-            <div class="front">
-                <div class="front-text">
-                    <h4 class="small-title">Кто</h4>
-                    <h4 class="big-title">мы?</h4>
-                    <p>Команда энтузиастов, которая неравнодушна к тому, что продается на рынке. </p>
-                    <p>Мы нарастили неплохую
-                        экспертизу в анализе записей и накопили большое количество честных аналоговых копий, близких к
-                        первоисточнику</p>
-                </div>
-                <div class="front-img">
-                    <img src="img/right-b-circle.png" alt="">
-                </div>
-            </div>
-        </div>
+    <div id="app">
+        <div class="modal-block" v-if="showModal">
+            <div class="modal-block-wrapper">
+                <div class="modal-block-overlay" @click="showModal = !showModal">
 
-    </div>
-    <div class="fourth-block">
-        <!--        slideOutLeft-->
-        <div class="custom-container">
-            <div class="background-text wow slideOutRight" data-wow-offset="300" data-wow-duration="2s" data-wow-delay="0.5s">
-                <h4 class="rose small">Что мы</h4>
-                <h4 class="rose big">предлагаем?</h4>
+                </div>
+                <div class="modal-block-content">
+                    <img class="circle" src="/img/right-b-circle.png" alt="">
+                    <img class="back" src="/img/footer.svg" alt="">
+                    <p>Спасибо за заявку, скоро мы с Вами свяжемся!</p>
+                    <button @click="showModal = !showModal" class="custom-button" type="button">Закрыть</button>
+                </div>
             </div>
-            <div class="front container-fluid">
-                <div class="front-text">
-                    <h4 class="small-title">Что мы</h4>
-                    <h4 class="big-title">предлагаем?</h4>
-                    <p class="title-one">Копии с мастер-лент.</p>
-                    <p class="title-two"> Да-да, все верно. У нас большое количество записей, которые близки к
-                        оригинальным записям. </p>
-                    <p>ВНИМАНИЕ! Мы не нарушаем авторские права, поэтому НЕ ПРОДАЕМ записи
-                        исполнителей, а ПРИГЛАШАЕМ ВАС К ПРОСЛУШИВАНИЮ!</p>
+        </div>
+        <div class="main-block">
+            <h1>АН<span style="color: #fff;position: relative">А</span>ЛОГ</h1>
+            <h3>возвраща<span style="color: #fff;position: relative;z-index: 2">ется</span></h3>
+            <p class="small-words">
+                <span>...а вместе с ним</span>
+                <span>и фальшивки</span>
+            </p>
+            <img class="letter-o wow" src="img/letter-o.svg" alt="">
+            <div class="player">
+                <img class="arrow" src="img/arrow.svg" alt="">
+                <img src="img/player.png" alt="player">
+                <div class="left-b">
+                    <img src="img/left-b.png" alt="">
+                </div>
+                <div class="right-b">
+                    <img src="img/right-b.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="second-block">
+            <img class="man-headphone" src="img/man-headphone.png" alt="">
+            <img class="man-headphone-mobile" src="img/man-headphone-mobile.png" alt="">
+            <div class="custom-container">
+                <div class="text">
+                    <h3>Люди снова<br>
+                        слушают<br>
+                        музыку на ленте</h3>
+                    <h4>Помните этот теплый ламповый звук?<br>Мы тоже. </h4>
+                    <div class="border-text">
+                        <p>Люди стремятся к качественному звуку и ищут качественные записи, которые близки к первоисточнику. К
+                            сожалению, и тут хватает своих «героев», которые делают «копии с мастеров», а по факту – с компакт
+                            дисков или с MP3.</p>
+                        <p>Мы решили, что хватит это терпеть, даешь оригинальный аналоговый звук! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="third-block">
+            <!--        slideOutLeft-->
+            <div class="custom-container">
+                <div class="background-text wow slideOutLeft" data-wow-offset="300" data-wow-duration="2s" data-wow-delay="0.5s">
+                    <h4 class="green small">КТО</h4>
+                    <h4 class="green big">МЫ?</h4>
+                </div>
+                <div class="front">
+                    <div class="front-text">
+                        <h4 class="small-title">Кто</h4>
+                        <h4 class="big-title">мы?</h4>
+                        <p>Команда энтузиастов, которая неравнодушна к тому, что продается на рынке. </p>
+                        <p>Мы нарастили неплохую
+                            экспертизу в анализе записей и накопили большое количество честных аналоговых копий, близких к
+                            первоисточнику</p>
+                    </div>
+                    <div class="front-img wow rotateInDownRight" data-wow-offset="100" data-wow-duration="2s">
+                        <img src="img/right-b-circle.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="fourth-block">
+            <!--        slideOutLeft-->
+            <div class="custom-container">
+                <div class="background-text wow slideOutRight" data-wow-offset="300" data-wow-duration="2s" data-wow-delay="0.5s">
+                    <h4 class="rose small">Что мы</h4>
+                    <h4 class="rose big">предлагаем?</h4>
+                </div>
+                <div class="front container-fluid">
+                    <div class="front-text">
+                        <h4 class="small-title">Что мы</h4>
+                        <h4 class="big-title">предлагаем?</h4>
+                        <p class="title-one">Копии с мастер-лент.</p>
+                        <p class="title-two"> Да-да, все верно. У нас большое количество записей, которые близки к
+                            оригинальным записям. </p>
+                        <p>ВНИМАНИЕ! Мы не нарушаем авторские права, поэтому НЕ ПРОДАЕМ записи
+                            исполнителей, а ПРИГЛАШАЕМ ВАС К ПРОСЛУШИВАНИЮ!</p>
+                    </div>
+                    <div class="button-box">
+                        <button class="custom-button wow shake" data-wow-offset="300" data-wow-duration="2s">Список записей</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-block">
+            <div class="custom-container">
+                <div class="card-block-arrow">
+                    <img src="img/arrow.svg" alt="">
+                </div>
+                <div class="card-block-content">
+                    <p class="title-one">Мы предлагаем вам Анализ записей.</p>
+                    <p class="title-two">Представьте, что к вам в руки попала запись, звучит она здорово (а может и не очень) и вам уж очень хочется знать источник этой записи. Мы готовы помочь.</p>
+                    <p class="title-three">Проанализируем вашу запись и выдадим сертификат с подтверждением источника записи.</p>
+                    <p class="title-four">Стоимость работ: 5000 руб.</p>
                 </div>
                 <div class="button-box">
-                    <button class="custom-button">Список записей</button>
+                    <button class="custom-button wow shake" @click="scroll()">Заказать анализ</button>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="card-block">
-        <div class="custom-container">
-            <div class="card-block-arrow">
-                <img src="img/arrow.svg" alt="">
-            </div>
-            <div class="card-block-content">
-                <p class="title-one">Мы предлагаем вам Анализ записей.</p>
-                <p class="title-two">Представьте, что к вам в руки попала запись, звучит она здорово (а может и не очень) и вам уж очень хочется знать источник этой записи. Мы готовы помочь.</p>
-                <p class="title-three">Проанализируем вашу запись и выдадим сертификат с подтверждением источника записи.</p>
-                <p class="title-four">Стоимость работ: 5000 руб.</p>
-            </div>
-            <div class="button-box">
-                <button class="custom-button">Заказать анализ</button>
-            </div>
-        </div>
-    </div>
-    <div class="footer-block">
-        <div class="custom-container">
-            <div class="title">
-                <h2>Послушаем</h2>
-                <h5>или проанализируем?</h5>
-            </div>
-            <div class="form">
-                <div class="left">
-                    <label>
-                        <input name="name" type="text" class="form-control" placeholder="Имя">
-                        <input name="phone" type="tel" class="form-control" placeholder="Телефон">
-                        <input name="what" type="text" class="form-control" placeholder="Что делаем?">
-                    </label>
+        <div class="footer-block">
+            <div class="custom-container">
+                <div class="title">
+                    <h2>Послушаем</h2>
+                    <h5>или проанализируем?</h5>
                 </div>
-                <div class="right">
-                    <label>
-                        <textarea name="comment" id="comment" class="form-control" cols="30" rows="10" placeholder="Что слушаем/анализируем?"></textarea>
-                    </label>
+                <div class="form">
+                    <div class="left">
+                        <label :class="{'error':(name.length === 0 && attemptToFillName)}">
+                            <span class="error-icon">
+                                <img src="/img/alert.svg" alt="">
+                            </span>
+                            <input v-model="name"
+                                   @change="attemptToFillName = false"
+                                   @blur="attemptToFillName = true"
+                                   name="name" type="text"
+                                   class="form-control"
+                                   placeholder="Имя">
+                        </label>
+                        <label :class="{'error':(phone.length === 0 && attemptToFillPhone)}">
+                            <span class="error-icon">
+                                <img src="/img/alert.svg" alt="">
+                            </span>
+                            <input v-model="phone"
+                                   @change="attemptToFillPhone = false"
+                                   @blur="attemptToFillPhone = true"
+                                   name="phone" type="tel"
+                                   class="form-control"
+                                   placeholder="Телефон">
+                        </label>
+                        <label :class="{'error':(what_do.length === 0 && attemptToFillWhatdo)}">
+                            <span class="error-icon">
+                                <img src="/img/alert.svg" alt="">
+                            </span>
+                            <input v-model="what_do"
+                                   @change="attemptToFillWhatdo = false"
+                                   @blur="attemptToFillWhatdo = true"
+                                   name="what"
+                                   type="text"
+                                   class="form-control"
+                                   placeholder="Что делаем?">
+                        </label>
+                    </div>
+                    <div class="right">
+                        <label :class="{'error':(subject.length === 0 && attemptToFillSubject)}">
+                            <span class="error-icon">
+                                <img src="/img/alert.svg" alt="">
+                            </span>
+                            <textarea v-model="subject"
+                                      @change="attemptToFillSubject = false"
+                                      @blur="attemptToFillSubject = true"
+                                      name="comment"
+                                      id="comment"
+                                      class="form-control"
+                                      cols="30"
+                                      rows="10"
+                                      placeholder="Что слушаем/анализируем?"></textarea>
+                        </label>
+                    </div>
+                </div>
+                <div class="button-box">
+                    <div class="errors" >
+                        <p v-if="false">Пожалуйста проверьте форму на ошибки</p>
+                    </div>
+                    <button class="custom-button" @click="get_data()">Отправить</button>
+                    <button @click="showModal = true">TEST</button>
                 </div>
             </div>
-            <div class="button-box">
-                <button class="custom-button">Отправить</button>
-            </div>
         </div>
-
     </div>
     <script src="js/wow.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/index.js"></script>
     <script>
         new WOW().init();
     </script>

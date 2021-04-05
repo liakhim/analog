@@ -1,0 +1,116 @@
+.modal-block {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  .modal-block-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal-block-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background: #00000050;
+      backdrop-filter: blur(10px);
+    }
+    .modal-block-content {
+      background: #fff;
+      position: relative;
+      padding: 30px;
+      width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      .circle {
+        width: 200px;
+        animation: 5s rotate infinite linear;
+        position: relative;
+        z-index: 1;
+      }
+      .back {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        bottom: -30%;
+        left: 0
+      }
+      p {
+        font-size: 2em;
+        text-align: center;
+        padding: 30px 0 10px 0;
+        position: relative;
+      }
+      .custom-button {
+        position: relative;
+      }
+    }
+  }
+}
+@media (max-width: 590px) {
+  .modal-block {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .modal-block-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .modal-block-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #00000050;
+        backdrop-filter: blur(10px);
+      }
+      .modal-block-content {
+        background: #fff;
+        position: relative;
+        padding: 30px;
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        .circle {
+          width: 200px;
+          animation: 5s rotate infinite linear;
+          position: relative;
+          z-index: 1;
+        }
+        .back {
+          height: 70%;
+          position: absolute;
+          bottom: 0;
+          left: 0
+        }
+        p {
+          font-size: 2em;
+          text-align: center;
+          padding: 30px 0 10px 0;
+          position: relative;
+        }
+        .custom-button {
+          position: relative;
+        }
+      }
+    }
+  }
+
+}
